@@ -1,0 +1,117 @@
+<extend name="Base/s1"/>
+
+	<block name="body">
+	<!--主体内容开始-->
+		<div class="content_active">
+			<div>
+				<a href="#" class="index-a">首页</a><span>></span><a href="#" class="index-b">发起活动</a>
+			</div>
+			<div class="content">
+				<div class="content-left">
+					<div class="admin-img">
+						<div class="admin-img-1"><img id='dl' src="{$faceid|get_cover='path'}" alt="用户图片" title="用户图片" />
+						<img src="__PUBLIC__/Home/img/shequ.jpg" id="ndl" style="display:none">
+						</div>
+						<script type='text/javascript'>
+							    dl=document.getElementById('dl');
+							    ndl=document.getElementById('ndl');
+							if(uname=='' || uname==null){
+									ndl.style.display=='block';
+									dl.style.display=='none';
+							}else{
+								ndl.style.display=='none';
+								dl.style.display=='block';
+							}
+						</script>
+						<div class="admin-img-2"><div class="guanliyuan" id='uname'>{:get_username()}</div><div style="font-size: 12px;">管理员</div></div>
+					</div>
+					
+					<div class="admin-img">
+						<p><a href="#">已发布的({$count})</a></p>
+						<p><a href="#">草稿箱(0)</a></p>
+					</div>
+					<h5>活动发布规则</h5>
+					<ul class="guize">
+						<li>严禁上传淫秽、低俗、反动等违法内容;</li>
+						<li>严禁上传于活动无关的内容;</li>
+						<li>严禁上传涉嫌侵犯他人知识产权的内容;</li>
+						<li>严禁上传其它根据网站规则不得上传的内容;</li>
+					</ul>
+				</div>
+				<div class="content-right">
+					<h1>发布活动</h1>
+					<form action="{:U('activity/activityupdate')}" method='post' enctype = 'multipart/form-data'>
+						<input type="hidden" name="id" value="{$data['id']}">
+						<div class="content-right-1">
+							<div class="right-1-1">
+								<ul class="right-2-1">
+								<li><label>文章标题:</label><input type="text" name='title' class="longinput" required="required" value="{$data['title']}"></li>
+								<li><label>所属分类:</label>
+								
+									<select class="fcjj" name='cid' id="cid">
+									<volist name='cc' id='vo'>
+									<if condition="$vo['id'] eq $data['cid'] ">
+									<option  value='{$vo.id}' selected="seleced"> {$vo.title}</option>
+									<else />
+									<option  value='{$vo.id}' selecte=""> {$vo.title}</option>
+									</if>
+									</volist>
+									</select>
+
+									<select class="fcjj" name="area">
+									
+										<option>--请选择区县--	</option>
+										<volist name='diqu' id='diqu'>
+										<if condition="$diqu['title'] eq $data['area'] ">
+										<option value="{$diqu['title']}" selected="selected">{$diqu['title']}</option>
+										<else />
+										<option value="{$diqu['title']}" selected="">{$diqu['title']}</option>
+										</if>
+										</volist>
+									</select>
+								</li>
+								<li><label>活动时间:</label><input type="date" name='starttime'class="smallinput" value="{$data['starttime']}"><span class="smallinputs">—</span><input type="date" name='stoptime' class="smallinput" value="{$data['stoptime']}"></li>
+								<li><label>地点:</label><input type="text" name='place' class="longinput" required="required" value="{$data['place']}"></li>
+								<li><label>手机号:</label><input type="text" class="longinput" name='tel' required="required" value="{$data['tel']}"></li>
+								<li><label>QQ:</label><input type="text" name='QQ'class="longinput" required="required" value="{$data['qq']}"></li>
+								
+								</ul>
+							</div>
+							<div class="right-1-2">
+								<span class="fmt">封面图(点击图片上传):</span>
+									<div class="bjxxwimage">
+									<img name='titlepage1' src="{$data['titlepage']}" title="北京信息网" alt="北京信息网" class="bjxxwimg" id="bjxxwe"/>
+									<input type="file" name='titlepage' width="100" height="500" id="fileField" size="28"/ value="{$data['titlepage']}">
+									</div>
+							</div>
+							<div class="clearfix"></div>
+						<!--  	<div class="right-fwb edit" id="edit">
+								
+							</div>	-->
+							 <div class="right-fwb edit">
+							  <label class="textarea">
+                                <textarea name='content'>{$data['content']}</textarea>
+                                {:hook('adminArticleEdit', array('name'=>$field['name'],'value'=>$field['value']))}
+                                </label>
+                                </div>
+							<div class="right-fwb-fb">
+								<input type="submit" value="发布" class="fb_1" />
+								 <!--  <textarea type='hidden' id='content1' name='content' style="display:none">{$data['content']}</textarea> -->
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!--主体内容结束-->
+		<script>
+			$(function(){
+
+				var value = $('#content1').val();
+				$('.froala-element').attr('data-placeholder','');
+				$('.froala-element').text(value);
+			})
+		</script>
+		
+	</block>
+

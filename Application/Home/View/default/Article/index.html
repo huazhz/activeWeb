@@ -1,0 +1,469 @@
+﻿<extend name="Base/s1"/>
+
+<block name="body">
+     
+        <!-- Contents  -->
+<div class="list_hrefs">
+	<a href="#">首页</a>
+	<volist name='class_info' id='vo'>
+	<span>{$category.title}</span>
+	</volist>
+	>
+	<a href="">最新活动</a>
+</div>
+<!---->
+<div class="list_all">
+	<h1 class="header_h1">最新活动</h1>
+	<div class="fenlei_0">分类</div>
+	
+	<ul class="fenlei" >
+		
+	<li ><a href="{:U('/home/article/index/pid/0/quxian/'.$dq_quxian.'/yong_shang/sj/quxian_id/'.$quxian_ids)}"  class="" id="0">全部</a></li>
+	<volist name='fenlei' id='fenlei'>
+	<li><a href="{:U('/home/article/index/pid/'.$fenlei['id'].'/quxian/'.$dq_quxian.'/yong_shang/'.$dq_y_s.'/quxian_id/'.$quxian_ids)}" id="{$fenlei.id}">{$fenlei.title}</a></li>	
+	
+	</volist>
+	
+	<!--	<li><a href="">汽车活动</a></li>
+		<li><a href="">赛事活动</a></li>
+		<li><a href="">电影活动</a></li>
+		<li><a href="">音乐/演出活动</a></li>
+		<li><a href="">戏剧/曲艺活动</a></li>
+		<li><a href="">户外/旅游活动</a></li>
+		<li><a href="">商展会议活动</a></li>
+		<li><a href="">社区活动</a></li>
+		<li><a href="">艺术展览活动</a></li>
+		<li><a href="">文化沙龙活动</a></li>
+		<li><a href="">游园/市集活动</a></li>
+		<li><a href="">吃喝/玩乐活动</a></li>
+		<li><a href="">运动/健身活动</a></li>
+		<li><a href="">公益环保活动</a></li>
+		<li><a href="">教育/亲子活动</a></li>
+		<li><a href="">派对/夜市活动</a></li>
+		<li><a href="">商场活动</a></li>
+		<li><a href="">招募/其他活动</a></li>
+	  -->
+		
+	</ul>
+	
+	<div class="clearfix"></div>
+	<div class="ditus"></div>
+	<ul class="diqu">
+		<div class="fenlei_x">地区</div>
+		<li><a href="{:U('/home/article/index/pid/'.$dq_pid.'/quxian//yong_shang/'.$dq_y_s.'/quxian_id/c')}" id="qx99">全部</a></li>
+		<volist name='diqu' id='diqu'>
+	<!--<li><a href="" id="{$diqu.id}"  onclick="qx(this)">{$diqu.title}</a></li>-->	
+	<li><a href="{:U('/home/article/index/pid/'.$dq_pid.'/quxian/'.$diqu['title'].'/yong_shang/'.$dq_y_s.'/quxian_id/'.$diqu['id'])}" id="{$diqu.id}">{$diqu.title}</a></li>	
+		</volist>
+		<!--<li><a href="#">东城区</a></li>
+		<li><a href="#">西城区</a></li>
+		<li><a href="#">朝阳区</a></li>
+		<li><a href="#">海淀区</a></li>
+		<li><a href="#">丰台区</a></li>
+		<li><a href="#">石景山区</a></li>
+		<li><a href="#">大兴区</a></li>
+		<li><a href="#">昌平区</a></li>
+		<li><a href="#">顺义区</a></li>
+		<li><a href="#">门头沟区</a></li>
+		<li><a href="#">房山区</a></li>
+		<li><a href="#">怀柔区</a></li>
+		<li><a href="#">通州区</a></li>
+		<li><a href="#">平谷区</a></li>
+		<li><a href="#">密云区</a></li>
+		<li><a href="#">延庆区</a></li>-->
+		
+		
+	</ul>
+	
+	 <div class="clearfix" style="clear: both;"></div>
+	<!--<ul class="html_paixu">
+		<li class="li_none">排序</li>
+		
+		<li class="html_paixu_border" id="rq" onclick="px(this)">人气</li>
+		<li class="html_paixu_border" id="zx" onclick="px(this)">最新</li>
+		<li class="html_paixu_border" id="ls" onclick="px(this)">历史活动</li>
+	</ul>-->
+		<ul class="html_paixu">
+		<li class="li_none"></li>
+		
+		<li><a class="html_paixu_border"  href="{:U('/home/article/index/pid/'.$dq_pid.'/quxian/'.$dq_quxian.'/yong_shang/sj/quxian_id/'.$quxian_ids)}" id="sj">商家活动</a></li>
+		<li><a class="html_paixu_border"  href="{:U('/home/article/index/pid/'.$dq_pid.'/quxian/'.$dq_quxian.'/yong_shang/yh/quxian_id/'.$quxian_ids)}" id="yh">用户活动</a></li>
+		<!--<li class="html_paixu_border" id="ls" onclick="px(this)">历史活动</li>-->
+	</ul>
+</div>
+<!--列表内容开始-->
+<div class="list_2">
+	<div class="list_2_left">
+		<ul class="goodlist1">
+		<volist name='users' id='vo' empty="$empty">
+	    	
+	    	
+	     	<li class="a12">
+	     		<div class="img_list"><a href='{:U("/home/article/".$froms."/id/".$vo['id'])}' target="_blank"><img src='{$vo.titlepage}'></a></div>
+	     			     		<div class="img_list_right">
+	     			<h5><a href='{:U("/home/article/".$froms."/id/".$vo['id'])}' target="_blank">{$vo.title} </a></h5>
+	     			<p class="p1">发布内容:{$vo.title}</p>
+	     			<p class="p2">
+	     				<span>时间:{$vo.starttime}--{$vo.stoptime}</span>
+	     				<span>地点：{$vo.place}</span>
+	     			</p>
+				<div class="right-277">
+	     				<img onclick='favor();return false;' src="http://active.bjxxw.com/Public/Home/img/kongxin.png" data-val="1"  value = {$vo["id"] }  id ='shoucang'>
+	     				
+	     				<input type="button"  value="立即查看" onclick="window.location.href='{:U("/home/article/".$froms."/id/".$vo['id'])}'">
+	     			</div>
+				
+	     		</div>
+	     		
+	     	</li>
+		
+	  
+	    </volist>
+	    
+	    	<volist name='users' id='vo'>
+	    	
+	<!--  
+	     	<li class="a12">
+	     		<div class="img_list"><a href="{:U('/home/article/'.$url_a.'/id/'.$vo['id'])}"  target="_blank"><img src='{$vo.titlepage}'></a></div>
+	     			     		<div class="img_list_right">
+	     			<h5><a href="{:U('/home/article/'.$url_a.'/id/'.$vo['id'])}" target="_blank">{$vo.title} </a></h5>
+	     			<p class="p1">发布内容:{$vo.title}</p>
+	     			<p class="p2">
+	     				<span>时间:{$vo.starttime}--{$vo.stoptime}</span>
+	     				<span>地点：{$vo.place}</span>
+	     			</p>
+				<div class="right-277">
+	     				<img onclick='favor();return false;' src="http://active.bjxxw.com/Public/Home/img/kongxin.png" data-val="1">
+	     				
+	     				<input type="button"  value="立即查看" onclick="window.location.href='{:U('/home/article/'.$url_a.'/id/'.$vo['id'])}'">
+	     			</div>
+				
+	     		</div>
+	     		
+	     	</li>
+		
+	  
+	    </volist>
+	
+
+	     <div class="page_fy">
+	    <!--  <form action="{:U('article/search')}" method='get'>
+			<ol class="page_fy1">
+				<a href="javascrpt:void(0)"><li class="page_top"><<</li></a>
+				<a href="javascrpt:void(0)"><li class="num-list">{$page}</li></a>
+				<a href="javascrpt:void(0)"><li class="num-list">2</li></a>
+				<a href="javascrpt:void(0)"><li class="num-list">3</li></a>
+				<a href="javascrpt:void(0)"><li class="num-list">4</li></a>
+				<a href="javascrpt:void(0)"><li class="num-list">5</li></a>
+				<a href="javascrpt:void(0)"><li class="num-list">6</li></a>
+				<li class="num-1ist1">...</li>
+				<a href="javascrpt:void(0)"><li class="page_top">>></li></a>
+
+				<li class="page-fanye">共{$count}页到&nbsp;第</li>
+				<li><input type="text" class="length25" name='search'></li>
+				<li class="width8">页</li>&nbsp;&nbsp;
+				<input type='submit' value='确定'>
+			</ol>{$page}
+
+			</form> -->
+			<div class="page">
+			{$page}
+        	</div>
+		</div>
+		</ul>
+		
+	</div>
+	<!--右侧部分-->
+	<div class="list_2_right">
+		
+		<div class="title_tj"><span class="span-yangshi"></span><span>热门推荐</span></div>
+		<div class="img_12">
+		<volist name='postlist' id='vv' offset='0' length='1'>
+		<img src="{$vv.path}">
+		</volist>
+		</div>
+		<ul class="time_list">
+		<volist name='postlist' id='vv'>
+			<li><a href="{:U('/home/article/detail/id/'.$vv['id'])}" target="_blank">{$vv.title}	</a><br><time class="time_1">{$vv.st}--{$vv.de}</time></li>
+		</volist>
+			<!-- <li><a href="" target="_blank">【赛事】世界冠军将川先生1vs26盲棋挑战	</a><br><time class="time_1">2016-04-20--2016-04-24</time></li>
+			<li><a href="" target="_blank">【赛事】世界冠军将川先生1vs26盲棋挑战	</a><br><time class="time_1">2016-04-20--2016-04-24</time></li>
+			<li><a href="" target="_blank">【赛事】世界冠军将川先生1vs26盲棋挑战	</a><br><time class="time_1">2016-04-20--2016-04-24</time></li>
+			<li><a href="" target="_blank">【赛事】世界冠军将川先生1vs26盲棋挑战	</a><br><time class="time_1">2016-04-20--2016-04-24</time></li>
+			<li><a href="" target="_blank">【赛事】世界冠军将川先生1vs26盲棋挑战	</a><br><time class="time_1">2016-04-20--2016-04-24</time></li>
+			<li><a href="" target="_blank">【赛事】世界冠军将川先生1vs26盲棋挑战	</a><br><time class="time_1">2016-04-20--2016-04-24</time></li> -->
+		</ul>
+	</div>
+</div>
+	  <!--<div class="ml_content">
+<div class="goodlist-main">
+	  <div class="lists-position">
+	  <div class="category-title">
+	  <h4><span>{$ctg.title}({$num})</span></h4>
+	  <div class="category-child">
+	  <empty name="childlist"> 
+	 <else/>
+	  <volist name="childlist" id="vo"><span> <a href="{:U('Article/lists/?pid='.$vo['id'])}">{$vo.title}</a></span></volist>
+	  </empty>
+</div>
+</div>
+
+ <div class="salesrank">
+  <h5><span>销量排行</span></h5>
+  <ul><volist name="sales" id="vo"><li><a class="picture" href="{:U('Article/detail?id='.$vo['id'])}"><img src="{$vo.id|get_cover_id|get_cover='path'}"  ></a>
+  <a class="title" href="{:U('Article/detail?id='.$vo['id'])}"> {$vo.id|get_good_name}</a>
+  <span>￥{$vo.id|get_good_price} </span>
+  </li></volist></ul>
+  
+  </div>
+  <div class="salesrank">
+  <h5><span>最近浏览</span></h5>
+ <ul><volist name="recent" id="vo"><li><a class="picture" href="{:U('Article/detail?id='.$vo['page'])}"><img src="{$vo.page|get_cover_id|get_cover='path'}"  ></a>
+  <a class="title" href="{:U('Article/detail?id='.$vo['page'])}"> {$vo.page|get_good_name}</a>
+  <span>￥{$vo.page|get_good_price} </span>
+  </li></volist></ul>
+ </div>
+	  </div>
+	   <div class="lists-area">
+	  <notempty name="bdata"> 
+	 <ul class="brand-list">
+	     <li>品牌:</li>
+		  <li id='brand-all' <eq name="brandid" value="">class="active"<else/></eq>><a href="{:U('Article/index',array(pid=>$ctg['id'],order=>1,'sort'=>$see,'start_price'=>$start_price,'end_price'=>$end_price))}">全部</a></li>
+		 <volist name="bdata" id="vo"  empty="暂时没有数据" key="k">
+	 <li id='brand-item' <eq name="brandid" value="$vo['id']">class="active"<else/></eq>><a href="{:U('Article/index',array(pid=>$ctg['id'],'brandid'=>$vo['id'],order=>1,'sort'=>$see,'start_price'=>$start_price,'end_price'=>$end_price))}" class="{$value}">{$vo.title}</a></li> 
+	</volist>
+	</ul>
+	</notempty>
+ <ul class="brand-list">
+	     <li>价格:</li>
+  <li <eq name="start_price" value="">class="active"<else/></eq>><a href="{:U('Article/index',array(pid=>$ctg['id'],'brandid'=>$brandid,order=>$order,'sort'=>$see))}" class="{$value}">全部</a></li>
+
+		  <li <eq name="start_price" value="0">class="active"<else/></eq>><a href="{:U('Article/index',array(pid=>$ctg['id'],'brandid'=>$brandid,order=>$order,'sort'=>$see,start_price=>0,'end_price'=>100))}" class="{$value}">0-100</a></li>
+<li <eq name="start_price" value="100">class="active"<else/></eq>><a href="{:U('Article/index',array(pid=>$ctg['id'],'brandid'=>$brandid,order=>$order,'sort'=>$see,start_price=>100,'end_price'=>200))}"">100-200</a></li>
+<li <eq name="start_price" value="200">class="active"<else/></eq>><a href="{:U('Article/index',array(pid=>$ctg['id'],'brandid'=>$brandid,order=>$order,'sort'=>$see,start_price=>200,'end_price'=>300))}"">200-300</a></li>
+<li <eq name="start_price" value="300">class="active"<else/></eq>><a href="{:U('Article/index',array(pid=>$ctg['id'],'brandid'=>$brandid,order=>$order,'sort'=>$see,start_price=>300,'end_price'=>400))}" class="{$value}">300-400</a></li>
+<li <eq name="start_price" value="400">class="active"<else/></eq>><a href="{:U('Article/index',array(pid=>$ctg['id'],'brandid'=>$brandid,order=>1,'sort'=>$see,start_price=>400,'end_price'=>500))}"class="{$value}">400-500</a></li>
+<li <eq name="start_price" value="500">class="active"<else/></eq>><a href="{:U('Article/index',array(pid=>$ctg['id'],'brandid'=>$brandid,order=>$order,'sort'=>$see,start_price=>500))}"class="{$value}">500以上</a></li>
+		 </ul> 
+
+       <ul class="ml_content_top"><li <eq name="order" value="1">class="active"<else/></eq>><a rel="nofollow" href="{:U('Article/index',array(pid=>$ctg['id'],'brandid'=>$brandid,order=>1,'sort'=>$see,'start_price'=>$start_price,'end_price'=>$end_price))}
+	   " class="{$value}">热度<i></i></a></li><li <eq name="order" value="2">class="active"<else/></eq>><a href="{:U('Article/index',array(pid=>$ctg['id'],'brandid'=>$brandid,order=>2,'sort'=>$see,'start_price'=>$start_price,'end_price'=>$end_price))}
+	   " class="{$value}">最新<i></i></a></li><li <eq name="order" value="3">class="active"<else/></eq>><a href="{:U('Article/index',array(pid=>$ctg['id'],'brandid'=>$brandid,order=>3,'sort'=>$see,'start_price'=>$start_price,'end_price'=>$end_price))}
+	   " class="{$value}">价格<i></i></a></li><li <eq name="order" value="4">class="active"<else/></eq>><a href="{:U('Article/index',array(pid=>$ctg['id'],'brandid'=>$brandid,order=>4,'sort'=>$see,'start_price'=>$start_price,'end_price'=>$end_price))}
+	   " class="{$value}">销量<i></i></a></li></ul> 
+	  
+	  <ul class="goodlist">
+      
+         <volist name="list" id="list"  empty="暂时没有数据" >
+          <li class="face" onmouseover="this.className='facehover'" onmouseout="this.className='face'">
+                    <a href="{:U('Article/detail?id='.$list['id'])}" class="list-img"> <img src="{$list.cover_id|get_cover='path'}"/></a>
+             <p> <a href="{:U('Article/detail?id='.$list['id'])}" class="t2"> {$list.title}</a></p>     
+                       <p><span class="red" title="预览：{$list.id|get_good_price}">价格：￥{$list.price}</span></p> 
+
+              </li>      
+            </volist>
+			</ul>
+		  	<!-- 分页 -->
+		  	<!--
+        <div class="page">
+{$page}
+        </div>	
+			
+			</div>
+	  </div>
+	  
+	 </div>
+
+         
+        </section>
+ 	-->
+ 	
+ 	<input type="hidden" id="pid" value=""  />
+ 		<input type="hidden" id="quxian" value=""  />
+ 	 	 <!--<input type="hidden" id="paixu" value=""  />-->
+ 	 	 <input type="hidden" id="page" value=""  />
+ 	 	 	 <input type="hidden" id="yong_shang" value=""  />
+ 	<script>
+ 	
+ 	var url=document.location.href;
+ 	 	var s=url.indexOf("?"); 
+url=url.substring(s+1);// t就是?后面的东西了 
+
+ 	 s=url.indexOf("pid"); 
+var t=url.substring(s+4);// t就是后面的东西了 
+t=t.split(".")[0];
+var pid=t.split("/");
+document.getElementById(pid[0]).style.color="#ff3c00";
+pid.indexof = function(value) {
+        var a = this;//为了增加方法扩展适应性。我这稍微修改了下
+        for (var i = 0; i < a.length; i++) {
+            if (a[i] == value)
+                return i;
+        }
+    }
+//  alert(pid.indexof('quxian'));
+ var quxian=pid[pid.indexof('quxian_id')+1];
+ if(quxian=='' || quxian =='c' || quxian=='false'){
+ 
+ 	 document.getElementById('qx99').style.color="#ff3c00";
+ }else{
+// 	$("."+quxian).style.background="#ff3c00";
+ document.getElementById(quxian).style.color="#ff3c00";
+ }
+
+//alert(easyUTF8('东城区'));  
+// alert(quxian);
+  var yong_shang=pid[pid.indexof('yong_shang')+1];
+  document.getElementById(yong_shang).style.background="#ff3c00";
+  document.getElementById(yong_shang).style.color="#ffffff";
+//alert(url);
+// 	 ss=url.indexOf("quxian"); 
+//var tt=url.substring(ss+6);// t就是后面的东西了 
+//tt=tt.split(".")[0];
+//var quxian=tt.split("/");
+
+
+// 		$(function(){
+// 			
+// 			//传参a指定找的元素
+// 			attys($(".fenlei:eq(0) li a"));
+// 			attys($(".diqu:eq(0) li a"));
+// 		})
+// 		
+// 		function attys(a){
+// 		 	$.each(a, function(i,item) {
+// 				$(item).attr("href","javascript:void(0)");
+// 			});
+// 			$(a).click(function(){
+// 				var other=$(this);
+// 				$(this).addClass("bjs");
+// 				$(this).parent().siblings().find(a).removeClass("bjs");
+// 				$(this).parent().parent().find(".all-c").removeClass("all-c");
+// 				
+// 			})
+// 			}
+////分类
+//function fl(a){
+//	document.getElementById('pid').value=a.id;
+//	active_list();
+//	
+//}
+////区县
+//function qx(a){
+//	document.getElementById('quxian').value=a.id;
+//	active_list();
+//}
+//////排序
+////function px(a){
+////	document.getElementById('paixu').value=a.id;
+////	active_list();
+////}
+////用户商家
+//function yong_shang(a){
+//	document.getElementById('yong_shang').value=a.id;
+//	active_list();
+//}
+////刷新活动列表
+// function active_list(){
+//// alert($("#pid").val()+'eeeeeee'+$("#quxian").val()+'ddd'+$("#paixu").val());
+//       $.ajax({
+//           type: "GET",
+//           url: "<{:U("article/ajax_active_list")}>",
+//           data: {
+//           	"pid":$("#pid").val(),
+//           	"quxian":$("#quxian").val(),
+////           	"paixu":$("#paixu").val(),
+//           	"paixu":$("#page").val(),
+//           	"yong_shang":$("#yong_shang").val()
+//           },
+//           dataType: "json",	
+//              success: function(data){
+//           
+//                       $('#process').empty();   //清空process里面的所有内容
+//                       var html =''; 
+//                           $.each(data, function(commentIndex, comment){
+//                             html += '' + data['content']                                        
+//                                       + '';
+//                                }); 
+//                       $('#process').html(html);
+//                    }
+//          });
+//}
+
+//收藏
+function favor(e) { 
+	var uexist="{:get_username()}";
+  
+   
+	var urls ;
+	if({$users[0]['from']} == 0){
+		urls='{:U("Collect/add")}';
+	}else{
+		urls = '{:U("Collect/addhome")}';
+	}
+
+
+if(uexist){
+ e = window.event || e;
+var favorid= e.target.getAttribute('value');//alert(favorid);die;
+	$.ajax({
+type:'post', //传送的方式,get/post
+url:urls, //发送数据的地址
+data:{id:favorid},
+ dataType: "json",
+success:function(data){
+	alert(data.msg)
+	}
+	,
+error:function (event, XMLHttpRequest, ajaxOptions, thrownError) {
+alert(XMLHttpRequest+thrownError); }
+})	
+}
+
+else{
+showBg();
+}
+	
+	}
+	$(function(){
+		$(function(){
+			$(".right-277 img").click(function(){
+			var d=$(this).attr("data-val")
+			if(d==1)
+			{
+			$(this).attr("data-val","2")
+			$(this).attr("src","http://active.bjxxw.com/Public/Home/img/shixin.png");
+
+			}
+			else if(d==2)
+			{
+$(this).attr("data-val","1")
+		$(this).attr("src","http://active.bjxxw.com/Public/Home/img/kongxin.png");}
+			
+			})
+ 			attys($(".fenlei:eq(0) li a"));
+ 			attys($(".diqu li a"))
+ 			paixu()
+ 		})
+//		function attys(a){
+//			$.each(a, function(i,item) {
+// 				$(item).attr("href","javascript:void(0)");
+// 				
+// 			});
+//			$(".fenlei a:contains('全部')").addClass("all-d");
+// 			$(a).not(".all-d").click(function(){
+// 				$(this).css("color","#ff4a00");
+// 				
+// 				$(this).parent().siblings().find(a).css("color","#666666")
+// 				$(".all-d").css("color","#FFFFFF")
+// 			})
+//		}
+		function paixu(){
+			$(".html_paixu .html_paixu_border").click(function(){
+				$(this).css({"color":"#ff4a00","border":"1px solid #ff4a00"});
+				$(this).siblings().not(".li_none").css({"border":"1px solid #d4d4d4","color":"#666666"});
+			})
+		}
+	})
+ 	</script>
+</block>

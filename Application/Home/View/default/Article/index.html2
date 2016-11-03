@@ -1,0 +1,281 @@
+<extend name="Base/s1"/>
+
+
+
+<block name="body">
+     
+        <!-- Contents  -->
+<div class="list_hrefs">
+	<a href="#">首页</a>
+	<span>></span>
+	<a href="">最新活动</a>
+</div>
+<!---->
+<div class="list_all">
+	<h1 class="header_h1">最新活动</h1>
+	<div class="fenlei_0">分类</div>
+	<ul class="fenlei">
+		<li><a href="">全部</a></li>
+		<li><a href="">房产家居</a></li>
+		<li><a href="">汽车活动</a></li>
+		<li><a href="">赛事活动</a></li>
+		<li><a href="">电影活动</a></li>
+		<li><a href="">音乐/演出活动</a></li>
+		<li><a href="">戏剧/曲艺活动</a></li>
+		<li><a href="">户外/旅游活动</a></li>
+		<li><a href="">商展会议活动</a></li>
+		<li><a href="">社区活动</a></li>
+		<li><a href="">艺术展览活动</a></li>
+		<li><a href="">文化沙龙活动</a></li>
+		<li><a href="">游园/市集活动</a></li>
+		<li><a href="">吃喝/玩乐活动</a></li>
+		<li><a href="">运动/健身活动</a></li>
+		<li><a href="">公益环保活动</a></li>
+		<li><a href="">教育/亲子活动</a></li>
+		<li><a href="">派对/夜市活动</a></li>
+		<li><a href="">商场活动</a></li>
+		<li><a href="">招募/其他活动</a></li>
+		
+		
+	</ul>
+	<div class="clearfix"></div>
+	<div class="ditus"></div>
+	<ul class="diqu">
+		<div class="fenlei_0">地区</div>
+		<li><a href="#">东城区</a></li>
+		<li><a href="#">西城区</a></li>
+		<li><a href="#">朝阳区</a></li>
+		<li><a href="#">海淀区</a></li>
+		<li><a href="#">丰台区</a></li>
+		<li><a href="#">石景山区</a></li>
+		<li><a href="#">大兴区</a></li>
+		<li><a href="#">昌平区</a></li>
+		<li><a href="#">顺义区</a></li>
+		<li><a href="#">门头沟区</a></li>
+		<li><a href="#">房山区</a></li>
+		<li><a href="#">怀柔区</a></li>
+		<li><a href="#">通州区</a></li>
+		<li><a href="#">平谷区</a></li>
+		<li><a href="#">密云区</a></li>
+		<li><a href="#">延庆区</a></li>
+		
+		
+	</ul>
+	
+	 <div class="clearfix" style="clear: both;"></div>
+	<ul class="html_paixu">
+		<li class="li_none">排序</li>
+		<li class="html_paixu_border">即将开始</li>
+		<li class="html_paixu_border">人气</li>
+		<li class="html_paixu_border">最新</li>
+	</ul>
+</div>
+<!--列表内容开始-->
+<div class="list_2">
+	<div class="list_2_left">
+		<ul class="goodlist1">
+	    	<a href="#">
+	     	<li>
+	     		<div class="img_list"><img></div>
+	     		<div class="img_list_right">
+	     			<h5>天同11号享30万优惠</h5>
+	     			<p class="p1">天同11号享30万优惠天同11号享30万优惠天同11号享30万优惠天同11号享30万优惠天同11号享30万优惠天同11号享30万优惠30万优惠天同11号享30万优惠天同11号享30万优惠30万优惠天同11号享30万优惠天同11号享30万优惠30万优惠天同11号享30万优惠天同11号享30万优惠</p>
+	     			<p class="p2">
+	     				<span>时间:2014-08-26--2014-09-26</span>
+	     				<span>地点：黄西村大街</span>
+	     			</p>
+	     		</div>
+	     	</li>
+	     </a>
+	     <a href="#">
+	     	<li>
+	     		<div class="img_list"><img></div>
+	     		<div class="img_list_right">
+	     			<h5>天同11号享30万优惠</h5>
+	     			<p class="p1">天同11号享30万优惠天同11号享30万优惠天同11号享30万优惠天同11号享30万优惠天同11号享30万优惠天同11号享30万优惠30万优惠天同11号享30万优惠天同11号享30万优惠30万优惠天同11号享30万优惠天同11号享30万优惠30万优惠天同11号享30万优惠天同11号享30万优惠</p>
+	     			<p class="p2">
+	     				<span>时间:2014-08-26--2014-09-26</span>
+	     				<span>地点：黄西村大街</span>
+	     			</p>
+	     		</div>
+	     	</li>
+	     </a>
+	     <a href="#">
+	     	<li>
+	     		<div class="img_list"><img></div>
+	     		<div class="img_list_right">
+	     			<h5>天同11号享30万优惠</h5>
+	     			<p class="p1">天同11号享30万优惠天同11号享30万优惠天同11号享30万优惠天同11号享30万优惠天同11号享30万优惠天同11号享30万优惠30万优惠天同11号享30万优惠天同11号享30万优惠30万优惠天同11号享30万优惠天同11号享30万优惠30万优惠天同11号享30万优惠天同11号享30万优惠</p>
+	     			<p class="p2">
+	     				<span>时间:2014-08-26--2014-09-26</span>
+	     				<span>地点：黄西村大街</span>
+	     			</p>
+	     		</div>
+	     	</li>
+	     </a>
+	     <a href="#">
+	     	<li>
+	     		<div class="img_list"><img></div>
+	     		<div class="img_list_right">
+	     			<h5>天同11号享30万优惠</h5>
+	     			<p class="p1">天同11号享30万优惠天同11号享30万优惠天同11号享30万优惠天同11号享30万优惠天同11号享30万优惠天同11号享30万优惠30万优惠天同11号享30万优惠天同11号享30万优惠30万优惠天同11号享30万优惠天同11号享30万优惠30万优惠天同11号享30万优惠天同11号享30万优惠</p>
+	     			<p class="p2">
+	     				<span>时间:2014-08-26--2014-09-26</span>
+	     				<span>地点：黄西村大街</span>
+	     			</p>
+	     		</div>
+	     	</li>
+	     </a>
+	     <a href="#">
+	     	<li>
+	     		<div class="img_list"><img></div>
+	     		<div class="img_list_right">
+	     			<h5>天同11号享30万优惠</h5>
+	     			<p class="p1">天同11号享30万优惠天同11号享30万优惠天同11号享30万优惠天同11号享30万优惠天同11号享30万优惠天同11号享30万优惠30万优惠天同11号享30万优惠天同11号享30万优惠30万优惠天同11号享30万优惠天同11号享30万优惠30万优惠天同11号享30万优惠天同11号享30万优惠</p>
+	     			<p class="p2">
+	     				<span>时间:2014-08-26--2014-09-26</span>
+	     				<span>地点：黄西村大街</span>
+	     			</p>
+	     		</div>
+	     	</li>
+	     </a>
+	    
+	     <div class="page_fy">
+			<ol class="page_fy1">
+				<li class="page_top"><<</li>
+				<li class="num-list">1</li>
+				<li class="num-list">2</li>
+				<li class="num-list">3</li>
+				<li class="num-list">4</li>
+				<li class="num-list">5</li>
+				<li class="num-list">6</li>
+				<li class="num-1ist1">...</li>
+				<li class="page_top">>></li>
+				<li class="page-fanye">共31页到第</li>
+				<li><input type="text" class="length25"></li>
+				<li class="width8">页</li>
+				<li class="page-qd"><a>确定</a></li>
+			</ol>
+		</div>
+		</ul>
+		
+	</div>
+	<!--右侧部分-->
+	<div class="list_2_right">
+		
+		<div class="title_tj"><span class="span-yangshi"></span><span>热门推荐</span></div>
+		<div class="img_12">
+			<img src="">
+		</div>
+		<ul class="time_list">
+			<li><a href="">【赛事】世界冠军将川先生1vs26盲棋挑战	</a><br><time class="time_1">2016-04-20--2016-04-24</time></li>
+			<li><a href="">【赛事】世界冠军将川先生1vs26盲棋挑战	</a><br><time class="time_1">2016-04-20--2016-04-24</time></li>
+			<li><a href="">【赛事】世界冠军将川先生1vs26盲棋挑战	</a><br><time class="time_1">2016-04-20--2016-04-24</time></li>
+			<li><a href="">【赛事】世界冠军将川先生1vs26盲棋挑战	</a><br><time class="time_1">2016-04-20--2016-04-24</time></li>
+			<li><a href="">【赛事】世界冠军将川先生1vs26盲棋挑战	</a><br><time class="time_1">2016-04-20--2016-04-24</time></li>
+			<li><a href="">【赛事】世界冠军将川先生1vs26盲棋挑战	</a><br><time class="time_1">2016-04-20--2016-04-24</time></li>
+			<li><a href="">【赛事】世界冠军将川先生1vs26盲棋挑战	</a><br><time class="time_1">2016-04-20--2016-04-24</time></li>
+		</ul>
+	</div>
+</div>
+	  <!--<div class="ml_content">
+<div class="goodlist-main">
+	  <div class="lists-position">
+	  <div class="category-title">
+	  <h4><span>{$ctg.title}({$num})</span></h4>
+	  <div class="category-child">
+	  <empty name="childlist"> 
+	 <else/>
+	  <volist name="childlist" id="vo"><span> <a href="{:U('Article/lists/?pid='.$vo['id'])}">{$vo.title}</a></span></volist>
+	  </empty>
+</div>
+</div>
+
+ <div class="salesrank">
+  <h5><span>销量排行</span></h5>
+  <ul><volist name="sales" id="vo"><li><a class="picture" href="{:U('Article/detail?id='.$vo['id'])}"><img src="{$vo.id|get_cover_id|get_cover='path'}"  ></a>
+  <a class="title" href="{:U('Article/detail?id='.$vo['id'])}"> {$vo.id|get_good_name}</a>
+  <span>￥{$vo.id|get_good_price} </span>
+  </li></volist></ul>
+  
+  </div>
+  <div class="salesrank">
+  <h5><span>最近浏览</span></h5>
+ <ul><volist name="recent" id="vo"><li><a class="picture" href="{:U('Article/detail?id='.$vo['page'])}"><img src="{$vo.page|get_cover_id|get_cover='path'}"  ></a>
+  <a class="title" href="{:U('Article/detail?id='.$vo['page'])}"> {$vo.page|get_good_name}</a>
+  <span>￥{$vo.page|get_good_price} </span>
+  </li></volist></ul>
+ </div>
+	  </div>
+	   <div class="lists-area">
+	  <notempty name="bdata"> 
+	 <ul class="brand-list">
+	     <li>品牌:</li>
+		  <li id='brand-all' <eq name="brandid" value="">class="active"<else/></eq>><a href="{:U('Article/index',array(pid=>$ctg['id'],order=>1,'sort'=>$see,'start_price'=>$start_price,'end_price'=>$end_price))}">全部</a></li>
+		 <volist name="bdata" id="vo"  empty="暂时没有数据" key="k">
+	 <li id='brand-item' <eq name="brandid" value="$vo['id']">class="active"<else/></eq>><a href="{:U('Article/index',array(pid=>$ctg['id'],'brandid'=>$vo['id'],order=>1,'sort'=>$see,'start_price'=>$start_price,'end_price'=>$end_price))}" class="{$value}">{$vo.title}</a></li> 
+	</volist>
+	</ul>
+	</notempty>
+ <ul class="brand-list">
+	     <li>价格:</li>
+  <li <eq name="start_price" value="">class="active"<else/></eq>><a href="{:U('Article/index',array(pid=>$ctg['id'],'brandid'=>$brandid,order=>$order,'sort'=>$see))}" class="{$value}">全部</a></li>
+
+		  <li <eq name="start_price" value="0">class="active"<else/></eq>><a href="{:U('Article/index',array(pid=>$ctg['id'],'brandid'=>$brandid,order=>$order,'sort'=>$see,start_price=>0,'end_price'=>100))}" class="{$value}">0-100</a></li>
+<li <eq name="start_price" value="100">class="active"<else/></eq>><a href="{:U('Article/index',array(pid=>$ctg['id'],'brandid'=>$brandid,order=>$order,'sort'=>$see,start_price=>100,'end_price'=>200))}"">100-200</a></li>
+<li <eq name="start_price" value="200">class="active"<else/></eq>><a href="{:U('Article/index',array(pid=>$ctg['id'],'brandid'=>$brandid,order=>$order,'sort'=>$see,start_price=>200,'end_price'=>300))}"">200-300</a></li>
+<li <eq name="start_price" value="300">class="active"<else/></eq>><a href="{:U('Article/index',array(pid=>$ctg['id'],'brandid'=>$brandid,order=>$order,'sort'=>$see,start_price=>300,'end_price'=>400))}" class="{$value}">300-400</a></li>
+<li <eq name="start_price" value="400">class="active"<else/></eq>><a href="{:U('Article/index',array(pid=>$ctg['id'],'brandid'=>$brandid,order=>1,'sort'=>$see,start_price=>400,'end_price'=>500))}"class="{$value}">400-500</a></li>
+<li <eq name="start_price" value="500">class="active"<else/></eq>><a href="{:U('Article/index',array(pid=>$ctg['id'],'brandid'=>$brandid,order=>$order,'sort'=>$see,start_price=>500))}"class="{$value}">500以上</a></li>
+		 </ul> 
+
+       <ul class="ml_content_top"><li <eq name="order" value="1">class="active"<else/></eq>><a rel="nofollow" href="{:U('Article/index',array(pid=>$ctg['id'],'brandid'=>$brandid,order=>1,'sort'=>$see,'start_price'=>$start_price,'end_price'=>$end_price))}
+	   " class="{$value}">热度<i></i></a></li><li <eq name="order" value="2">class="active"<else/></eq>><a href="{:U('Article/index',array(pid=>$ctg['id'],'brandid'=>$brandid,order=>2,'sort'=>$see,'start_price'=>$start_price,'end_price'=>$end_price))}
+	   " class="{$value}">最新<i></i></a></li><li <eq name="order" value="3">class="active"<else/></eq>><a href="{:U('Article/index',array(pid=>$ctg['id'],'brandid'=>$brandid,order=>3,'sort'=>$see,'start_price'=>$start_price,'end_price'=>$end_price))}
+	   " class="{$value}">价格<i></i></a></li><li <eq name="order" value="4">class="active"<else/></eq>><a href="{:U('Article/index',array(pid=>$ctg['id'],'brandid'=>$brandid,order=>4,'sort'=>$see,'start_price'=>$start_price,'end_price'=>$end_price))}
+	   " class="{$value}">销量<i></i></a></li></ul> 
+	  
+	  <ul class="goodlist">
+      
+         <volist name="list" id="list"  empty="暂时没有数据" >
+          <li class="face" onmouseover="this.className='facehover'" onmouseout="this.className='face'">
+                    <a href="{:U('Article/detail?id='.$list['id'])}" class="list-img"> <img src="{$list.cover_id|get_cover='path'}"/></a>
+             <p> <a href="{:U('Article/detail?id='.$list['id'])}" class="t2"> {$list.title}</a></p>     
+                       <p><span class="red" title="预览：{$list.id|get_good_price}">价格：￥{$list.price}</span></p> 
+
+              </li>      
+            </volist>
+			</ul>
+		  	<!-- 分页 -->
+		  	<!--
+        <div class="page">
+{$page}
+        </div>	
+			
+			</div>
+	  </div>
+	  
+	 </div>
+
+         
+        </section>
+ 	-->
+ 	<script>
+ 		$(function(){
+ 			//传参a指定找的元素
+ 			attys($(".fenlei:eq(0) li a"));
+ 			attys($(".diqu:eq(0) li a"));
+ 		})
+ 		
+ 		function attys(a){
+ 		 	$.each(a, function(i,item) {
+ 				$(item).attr("href","javascript:void(0)")
+ 			});
+ 			$(a).click(function(){
+ 				var other=$(this);
+ 				$(this).addClass("bjs");
+ 				$(this).parent().siblings().find(a).removeClass("bjs");
+ 			})
+ 			}
+ 	</script>
+</block>

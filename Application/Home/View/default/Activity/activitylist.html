@@ -1,0 +1,73 @@
+﻿<extend name="Base/s1"/>
+
+	<block name="body">
+	<!--主体内容开始-->
+		<style>.content-right li.zfd{ float: left;width: 180px;}.list8{border-bottom: 1px solid #d4d4d4;height: 50px;line-height: 50px;}</style>
+		<div class="content_active">
+			<div>
+				<a href="#" class="index-a">首页</a><span>></span><a href="#" class="index-b">发起活动</a>
+			</div>
+			<div class="content">
+				<div class="content-left">
+					<div class="admin-img">
+						<div class="admin-img-1"><img id='dl' src="{$faceid|get_cover='path'}" alt="用户图片" title="用户图片" />
+						<img src="__PUBLIC__/Home/img/shequ.jpg" id="ndl" style="display:none">
+						</div>
+						<script type='text/javascript'>
+							    dl=document.getElementById('dl');
+							    ndl=document.getElementById('ndl');
+							if(uname=='' || uname==null){
+									ndl.style.display=='block';
+									dl.style.display=='none';
+							}else{
+								ndl.style.display=='none';
+								dl.style.display=='block';
+							}
+						</script>
+						<div class="admin-img-2"><div class="guanliyuan" id='uname'>{:get_username()}</div><div style="font-size: 12px;">管理员</div></div>
+					</div>
+					
+					<div class="admin-img">
+						<p><a href="#">已发布的({$count})</a></p>
+						<p><a href="#">草稿箱(0)</a></p>
+					</div>
+					<h5>活动发布规则</h5>
+					<ul class="guize">
+						<li>严禁上传淫秽、低俗、反动等违法内容;</li>
+						<li>严禁上传于活动无关的内容;</li>
+						<li>严禁上传涉嫌侵犯他人知识产权的内容;</li>
+						<li>严禁上传其它根据网站规则不得上传的内容;</li>
+					</ul>
+				</div>
+				<div class="content-right">
+					<div>
+						<h3>发布管理</h3>
+						<ul>
+							<li class="list8">
+								<ul>
+									<li class="zfd" style="width: 80px;"><input type="checkbox">全选</li>
+									<li class="zfd" style="width: 400px;">标题</li>
+									<li class="zfd">创建时间</li>
+									<li class="zfd">操作</li>
+								</ul>
+							</li>
+							<volist name="data" id="dd">
+								<li class="list8">
+									<ul>
+										<li class="zfd" style="width: 80px;"><input type="checkbox"></li>
+										<li class="zfd" style="width: 400px;"><a href="__MODULE__/Article/detailUser/id/{$dd.id}.html"><span>{$dd.title}</span></a></li>
+										<li class="zfd"><span>{:date('Y-m-d H:i:s',$dd['create_time'])}</span></li>
+										<li class="zfd"><a href="__MODULE__/Activity/delete/id/{$dd.id}.html" >删除</a>|<a  href="__MODULE__/Activity/activityedit/id/{$dd.id}.html">修改</a></li>
+									</ul>
+								</li>
+							</volist>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--主体内容结束-->
+		
+		
+	</block>
+

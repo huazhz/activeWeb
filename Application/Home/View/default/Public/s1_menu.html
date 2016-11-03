@@ -1,0 +1,103 @@
+<!-- 导航条-->
+
+ <div class="menu-wrapper" >
+    <div class="nav-all">
+       <div class="all_class" id="all-class">
+        <h2><span class="grid"><img src="__IMG__/grid.png"></span><span>活动分类</span><b></b></h2>
+      </div>
+      <div class="all-goods" style="display: none;" id="all-goods">
+  <!--  
+<volist name="category" id="cate">
+<div class="item">
+          <div class="product"><h4><a href="{:U('home/article/index/pid/'.$cate['id'])}">{$cate.title}</a> </h4> </div>
+            <if condition="$cate['child'] neq false">
+              <!--<div class="product-wrap pos"> 
+          
+            <div class="cf">
+              <div class="fl wd252 pr20">
+              
+                <volist name="cate['child']" id="cate_sub">
+                 <ul class="cf"> <li><span><a href="{:U('home/article/lists/pid/'.$cate_sub['id'])}">{$cate_sub.title}</a></span>
+                   <if condition="$cate_sub['child']">
+ <volist name="cate_sub['child']" id="cate_sub_two">
+<a href="{:U('home/article/lists/pid/'.$cate_sub_two['id'])}">{$cate_sub_two.title} </a>
+           
+                            </volist>                </if> 
+              
+                </li> </ul>
+                </volist>
+               
+</div>
+            </div> </div>-->
+            </if>
+       
+        </div>
+</volist>
+  --> 
+    			<div class="item">
+
+         			 <div class="product"><h4><a href="{:U('home/article/index/pid/52')}" target="_blank">最新活动</a> </h4></div>     
+
+      		 </div>
+
+      		 <div class="item">
+
+         			 <div class="product"><h4><a href="{:U('home/article/index/pid/186')}" target="_blank">房产家居</a> </h4></div>     
+
+      		 </div>
+
+      		 <div class="item">
+
+         			 <div class="product"><h4><a href="{:U('home/article/index/pid/184')}" target="_blank">汽车活动</a> </h4></div>     
+
+      		 </div>
+
+      		 <div class="item">
+
+         			 <div class="product"><h4><a href="{:U('home/article/index/pid/185')}" target="_blank">赛事活动</a> </h4></div>     
+
+      		 </div>
+
+      		 <div class="item">
+
+         			 <div class="product"><h4><a href="{:U('home/article/index/pid/163')}" target="_blank">电影活动</a> </h4></div>     
+
+      		 </div>
+
+      		 <div class="item">
+
+         			 <div class="product"><h4><a href="{:U('home/article/index/pid/183')}" target="_blank">音乐/演出活动</a> </h4></div>     
+
+      		 </div>
+
+      		 <div class="item">
+
+         			 <div class="product"><h4><a href="{:U('home/article/index/pid/167')}" target="_blank">户外/旅游活动</a> </h4></div>     
+
+      		 </div>
+
+      		 <div class="item">
+
+         			 <div class="product"><h4><a href="{:U('home/article/index/pid/178')}" target="_blank">教育/亲子活动</a> </h4></div>     
+
+      		 </div>
+
+      		 <div class="item">
+
+         			 <div class="product"><h4><a href="{:U('home/article/index/pid/168')}" target="_blank">全部</a> </h4></div>     
+
+      		 </div>    
+      </div></div>
+    
+    
+    <ul class="menu">
+      <think:nav name="nav">
+                    	<eq name="nav.pid" value="0">
+                       <li>
+                            <a href="{$nav.url|get_nav_url}" target="<eq name='nav.target' value='1'>_blank<else/>_self</eq>">{$nav.title}</a>
+                      </li>
+                        </eq>
+                    </think:nav>
+    </ul>
+    
+  </div>

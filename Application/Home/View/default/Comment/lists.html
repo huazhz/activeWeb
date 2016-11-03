@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>{$meta_title}_{:C('WEB_SITE_TITLE')}</title>
+<head>
+<link href="__CSS__/top.css" rel="stylesheet">
+<link href="__CSS__/common.css" rel="stylesheet">
+<link href="__CSS__/tuan.css" rel="stylesheet">
+<link href="__CSS__/footer.css" rel="stylesheet">
+<link href="__CSS__/listhref.css" rel="stylesheet">
+
+<link href="__CSS__/goactivity.css" rel="stylesheet">
+<link href="__CSS__/font-awesome.css" rel="stylesheet">
+<link href="__CSS__/froala_editor.min.css" rel="stylesheet">
+<link href="__CSS__/froala_page.min.css" rel="stylesheet">
+
+
+
+<script type="text/javascript" src="__JS__/jquery.min.js"></script>
+<script type="text/javascript" src="__JS__/public.js"></script>
+<script type="text/javascript" src="__JS__/froala_editor.min.js"></script>
+<script type="text/javascript" src="__JS__/font_family.min.js"></script>
+<script type="text/javascript" src="__JS__/tables.min.js"></script>
+<script type="text/javascript" src="__JS__/zh_cn.js"></script>
+<script type="text/javascript" src="__JS__/font_size.min.js"></script>
+<script type="text/javascript" src="__JS__/block_styles.min.js"></script>
+<script type="text/javascript" src="__JS__/goactivity.js" ></script>
+
+
+</head>
+<body>
+<!-- 工具条 -->
+	<include file="Public/toolbar"/>
+	<!-- /工具条 -->
+	<!-- 头部 -->
+	<div class="yershop_wrapper">
+	<include file="Public/s1_header"/>
+	
+	<!-- /头部 -->
+
+	<!-- 菜单 -->
+	<include file="Public/s1_menu"/>
+	<!-- /菜单 -->
+
+
+	<!-- 主体 -->
+	<include file="Public/s1_body"/>
+	<!-- 主体 -->
+
+  <!-- 购物车js -->
+   <include file="Public/cart_js"/>
+   <!-- /购物车js -->
+
+	
+
+<div class="main">
+	<div class="main_center">
+		<div class="center_left">
+<!-- 左侧菜单 -->
+	<include file="Public/leftmenu"/>
+<!-- 左侧菜单 -->
+</div>
+<!--<div class="center_right" style="display: none;">
+	<div class="center_right_loading"></div>
+</div>
+<div id="memberCenter" style="display: block;">-->
+	
+<!-- 个人中心 初始状态 start -->
+<div class="center_right" id="MemberCenterCtrl" style="display: block;">
+	
+	<h3 class="cr_h3 cr_h3_gray">历史评价统计</h3>
+
+	
+	<!--<div class="personal_info">
+				<p><span class="rate-icon rate-ok"><img src="__IMG__/ok.png">好评</span>{$best}个<span class="rate-icon rate-ok"><img src="__IMG__/bad.png">差评</span>{$bad}个<span class="rate-icon rate-ok"><img src="__IMG__/common.png">一般</span>{$common}个</p>
+			</div>-->
+	<h4 class="gray_pingjia"><a href="{:U('Comment/lists?type=0')}"><span>官方活动评价列表</span></a>&nbsp;<a href="{:U('Comment/lists?type=1')}"><span>用户活动评价列表</span></a></h4>
+	   
+	    <!--<table   class="col_name"  width="100%">
+        <thead>
+            <tr>
+                <th width="10%">活动名称</th>
+				<th width="35%" >我的评论</th>
+				<th width="30%" >时间</th>
+                <th width="25%">操作</th>
+				
+               
+				
+              </tr>
+ <volist name="list" id="co"> 
+  <tr class="comment_list"><td width="10%" align="center"><php>if($co['commentscore']==1){echo "<img src='__IMG__/bad.png'>"
+			  ;};
+			  if($co['commentscore']==2){echo "<img src='__IMG__/common.png'>"
+			  ;};
+			  if($co['commentscore']==3){echo "<img src='__IMG__/ok.png'>"
+			  ;};
+			  </php><td width="35%" align="center">{$co.content}</br>{$co.create_time|date='Y-m-d H:i:s',###}</td>
+			  <td width="30%" align="center"> <a href="{:U('Article/detail?id='.$co['goodid'])}" >{$co.goodid|get_good_name} </a>￥{$co.goodid|get_good_price} </td>
+			   <th width="25%"></th>
+			  </tr>
+    
+        </volist></table>-->
+        <div class="good-canshu1">
+        	<span class="pingjia_name">活动名称</span>
+        	<span class="pingjia_my">我的评价</span>
+        	<span class="pingjia_time">评价时间</span>
+        	<span class="pingjia_caozuo">操作</span>	  
+		</div>
+        <div class="pingjia_area">
+        <!-- 官方发布活动评论区域 -->
+        <if condition="$_GET['type'] eq 0">
+
+	        <volist name="data1" id="vo">
+			<div class="cos">
+			     <span class="c1"><a href="{:U('Article/detail?id='.$vo['gid'])}" class="dl"> <img src="{$vo.path}"  width="70" height="70"/></a>
+			     <span class="dd"><a href="{:U('Article/detail?id='.$vo['gid'])}"  class="dd"> {$vo.title}</a></span>
+			     <span class="dd"></span>
+			     </span>
+			  <span class="c2">{$vo.content}</span>
+			  <span class="c3">{:date('Y-m-d H:i:s',$vo['creattime'])}</span>
+			  <a href="{:U('Comment/delete?type=0&id='.$vo['id'])}" class="c4">删除</a> 
+			  </div>
+			  </volist>
+			  <!-- 分页 -->
+        <div class="page">
+			{$page1}
+        </div>
+        
+			  <else />
+			   <!-- 用户发布活动评论区域 -->
+			  
+
+
+			   <volist name="data2" id="vo">
+			<div class="cos">
+			     <span class="c1"><a href="{:U('Article/detailUser?id='.$vo['gid'])}" class="dl"> <img src="{$vo.path}"  width="70" height="70"/></a>
+			     <span class="dd"><a href="{:U('Article/detailUser?id='.$vo['gid'])}"  class="dd"> {$vo.title}</a></span>
+			     <span class="dd"></span>
+			     </span>
+			  <span class="c2">{$vo.content}</span>
+			  <span class="c3">{:date('Y-m-d H:i:s',$vo['creattime'])}</span>
+			  <a href="{:U('Comment/delete?type=1&id='.$vo['id'])}" class="c4">删除</a> 
+			  </div>
+			  </volist>
+			  	<!-- 分页 -->
+        <div class="page" >
+			{$page2}
+        </div>
+			
+	</div>
+	</if>
+
+
+<!-- 个人中心 初始状态 end -->
+	</div>
+		</div>
+		</div>
+    <script type="text/javascript">_init_area();</script>
+       
+  </div>
+
+<!-- 底部 -->
+	<div class="footer">
+<!--<div class="footer_pic_new">
+		<div class="footer_pic_new_inner">
+		    <a name="foot_1" href="http://help.dangdang.com/details/page13" target="_blank" class="footer_pic01"><span>正规渠道正品保障</span></a>
+		    <a name="foot_2" class="footer_pic02" href="http://help.dangdang.com/details/page21" target="_blank"><span>放心购物货到付款</span></a>
+		    <a name="foot_3" class="footer_pic03" href="http://help.dangdang.com/details/page16" target="_blank"><span>150城市次日送达</span></a>
+		    <a name="foot_4" class="footer_pic04" href="http://help.dangdang.com/details/page29" target="_blank"><span>上门退货当场退款</span></a>
+		</div>
+	</div>-->
+    <div class="foot_center">  
+	
+  <volist name="footer" id="vo">
+<dl><dt>{$vo.title}</dt>
+ <volist name="vo['id']" id="son"> 
+<dd><a rel="nofollow"  href="{:U('help/lists?pid='.$son['id'])}">{$son.title}</a></dd>
+</volist>
+</dl>
+</volist> 
+
+<dl>
+    <dt>在线客服</dt>
+    <dd>周一至周五</dd>
+    <dd>09:00-18:00</dd>
+	<dd>
+		<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1010422715&amp;site=qq&amp;menu=yes">
+		在线咨询
+	<!--<img border="0" src="http://wpa.qq.com/pa?p=2:1010422715:51" alt="点击这里给我发消息" title="点击这里给我发消息"/>-->
+		</a></dd>
+</dl>
+
+<div class="footer_contant">
+	<div class="footer_erwima">
+		<img src="Public/Home/img/weixin.png">
+		<img src="Public/Home/img/weixinma.png" style="display: none;" class="footer_xianshi">
+	</div>
+	<div class="footer_erwima">
+		<img src="Public/Home/img/weibo.png">
+		<img src="Public/Home/img/weiboma.png" style="display: none;" class="footer_xianshi">
+	</div>
+	<div class="footer_erwima">
+		<img src="Public/Home/img/android.png">
+		<img src="Public/Home/img/andriodma.png" style="display: none;" class="footer_xianshi">
+	</div>
+	<div class="footer_erwima">
+		<img src="Public/Home/img/apple.png">
+		<img src="Public/Home/img/applema.png" style="display: none;" class="footer_xianshi">
+	</div>
+</div>
+<script>
+	$(".footer_erwima").mouseover(function(){
+    	$(this).find("img").show();
+	});
+	$(".footer_erwima").mouseout(function(){
+    	$(".footer_xianshi").hide();
+	});
+</script>
+
+  
+
+     
+    </div>
+ 
+<div class="theme-footer"> 
+    
+
+  
+      
+       <p><span style=" text-align: center;"> Copyright 2005-2015 北京信息网建站 版权所有 技术支持:北京信息网建站 </span></p>
+    
+</div> </div>
+	<!-- /底部 -->
+</body>
+</html>
+</body>
+</html>
